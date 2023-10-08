@@ -23,7 +23,6 @@
   apt:
     name:
       [
-        "tmux",
         "wireshark",
         "fzf",
         "kdenlive",
