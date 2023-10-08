@@ -5,6 +5,11 @@
   tags:
     - install
     - node
+- name: Install pnpm
+  shell: curl -fsSL https://get.pnpm.io/install.sh | sh -
+  tags:
+    - install
+    - node
 - name: Install eslint
   npm:
     name: eslint
@@ -26,11 +31,10 @@
   tags:
     - install
     - node
-- name: Install TS-Node
+- name: Install tsx
   npm:
-    name: ts-node
+    name: tsx
     global: yes
   tags:
     - install
     - node
-
