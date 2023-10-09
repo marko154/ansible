@@ -34,7 +34,6 @@
         "pavucontrol",
         "moreutils",
         "clangd",
-        "ubuntu-mate-desktop",
       ]
   tags:
     - install
