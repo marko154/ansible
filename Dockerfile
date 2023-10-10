@@ -12,8 +12,14 @@ RUN apt-get update && \
 
 FROM base AS marko
 ARG TAGS
-RUN addgroup --gid 1000 marko
-RUN adduser --gecos marko --uid 1000 --gid 1000 --disabled-password marko
+# RUN addgroup --gid 1000 marko
+# RUN adduser --gecos marko --uid 1000 --gid 1000 --disabled-password marko
+
+ENV USER="marko"
+RUN useradd -m ${USER}
+RUN adduser ${USER} sudo
+RUN echo "${USER} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/sudoers
+
 USER marko
 WORKDIR /home/marko
 

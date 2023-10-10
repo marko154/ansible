@@ -30,3 +30,6 @@
   tags:
     - install
     - neovim
+# https://stackoverflow.com/questions/74785927/clangd-doesnt-recognize-standard-headers
+- name: Install this to get c++ header file autocomplete in neovim
+  apt: name=libstdc++-12-dev
